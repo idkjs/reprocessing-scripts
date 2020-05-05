@@ -10,7 +10,6 @@ Installing with `brew install ios-deploy` may not work.
 ```
 Usage:
 - rsb all
-
     builds all targets
 - rsb js
     builds js target to `./public`
