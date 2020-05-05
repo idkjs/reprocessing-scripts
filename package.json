@@ -10,19 +10,20 @@
   "author": "Jared Forsyth",
   "license": "MIT",
   "scripts": {
-    "build": "bsb -make-world -backend native",
     "start": "bsb -make-world -backend native -w",
-    "postinstall": "bsb -make-world -backend native",
-    "clean": "bsb -clean-world"
+    "build": "bsb -clean-world -make-world -backend native",
+    "clean": "bsb -clean-world",
+    "reformat": "bsrefmt --in-place $(find src -name '*.re' -print) -w 80",
+    "build-watch": "bsb -clean-world -make-world -backend native -- -w"
   },
   "dependencies": {
-    "bs-platform": "bsansouci/bsb-native#fast",
-    "ios-deploy": "1.9.4",
-    "ios-sim": "6.1.2",
-    "minimist.re": "^0.0.3",
-    "pack.re": "0.1.0",
-    "reason-cli-tools": "^1.0.3",
-    "reason-simple-server": "^1.2.0",
-    "rex-json": "1.1.0"
+    "bsb-native": "5.0.3",
+    "bs-platform-native": "0.0.12",
+    "ios-sim": "9.0.0",
+    "minimist.re": "^0.0.5",
+    "pack.re": "0.2.0",
+    "reason-cli-tools": "^1.0.4",
+    "reason-simple-server": "^1.2.1",
+    "rex-json": "1.4.0"
   }
 }

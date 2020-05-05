@@ -1,9 +1,16 @@
 
 # Easily build your reprocessing game to mobile & desktop & web!
 
+## Prequisites
+
+[ios-deploy](https://github.com/ios-control/ios-deploy#readme) must be installed globally with `npm i -g ios-deploy@beta --unsafe-perm=true` per [issue](https://github.com/ios-control/ios-deploy/issues/415#issuecomment-617270636).
+
+Installing with `brew install ios-deploy` may not work.
+
 ```
 Usage:
 - rsb all
+
     builds all targets
 - rsb js
     builds js target to `./public`
@@ -36,8 +43,8 @@ Convert the following dependencies to reason:
 - webpack
   - use something like https://github.com/prakhar1989/ocaml-js
   - don't need any of webpack's fancy features
-- ios-sim
+- [ios-sim](https://github.com/ios-control/ios-sim#readme)
   - this shouldn't be too hard - just use xcodebuild & parse some things
-- ios-deploy
+- [ios-deploy](https://github.com/ios-control/ios-deploy#readme)
   - this has a large native objc component, which might me more difficult to translate
   - on the other hand, we could leave it as objc & just move over any js bits
